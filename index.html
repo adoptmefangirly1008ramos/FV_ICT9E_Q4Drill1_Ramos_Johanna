@@ -3,40 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q4 Practice 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css " rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Electricity Consumption Classifier</h1>
-    <!--title-->
+    <h1>Electricity Usage Checker</h1>
+    <!--comment-->
 
-     <input type="text" id="Electricity" class="form-control" placeholder="type here..">
+    <input type="text" id="Electricity" class="form-control" placeholder="type here">
 
-     <button class="btn btn-info" onclick="checkAge()">Check</button>
+    <button class="btn btn-info" onclick="checkElectricity()">Check</button>
 
     <script>
-       
-       function checkElectricity(){
-            var age = document.getElementById("Electricity").value;
-       
-            if(isNaN(Electricity) || Electricity < 0){
-                alert("Please input a valid number.")
 
-            }
-            else if(Electricity <= 0) && (Electricity <=100){
-        alert("You are a Lifeline Consumer : Discounted electricity rates");
-    }
-   
-            else if(Electricity > 18){
-         alert("You are of legal age.");
-    }
 
-    else
-    {
-        alert("Please enter your Electricity Consumption.");
-    }
-}
+    function checkElectricity(){
+        var Electricity = document.getElementById("Electricity").value;
+
+        if(isNaN(Electricity) || Electricity < 0){
+
+            alert("Please input a valid number");
+
+        }
+
+        else if(Electricity >= 0 && Electricity <= 100){
+
+            alert("Lifeline Consumer: Discounted Electricity Rates");
+
+        }
+
+        else if(Electricity >= 101 && Electricity <= 200){
+
+            alert("Low Consumption: Normal Residential Rate");
+
+        }
+
+        else if(Electricity >= 201 && Electricity <= 300){
+
+            alert("Average Consumption : Typical Electricity Usage");
+
+        }
+
+        else if(Electricity >= 301 && Electricity <= 500){
+
+            alert("High Consumption : Higher electricity usage");
+
+        }
+
+        else{
+
+            alert("You have a very high electricity usage");
+        }
+
+        }
     </script>
 </body>
 </html>
